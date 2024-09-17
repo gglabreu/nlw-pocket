@@ -25,19 +25,22 @@ export function PendingGoals() {
   }
 
   return (
-    <div className="flex flex-wrap gap-3">
-      {data.map(goal => {
-        return (
-          <OutlineButton
-            key={goal.id}
-            disabled={goal.completionCount >= goal.desiredWeeklyFrequency}
-            onClick={() => handleCompleteGoal(goal.id)}
-          >
-            <Plus className="size-4 text-zinc-600" />
-            {goal.title}
-          </OutlineButton>
-        )
-      })}
-    </div>
+    <>
+      <h2 className="text-xl font-medium">Metas</h2>
+      <div className="flex flex-wrap gap-3">
+        {data.map(goal => {
+          return (
+            <OutlineButton
+              key={goal.id}
+              disabled={goal.completionCount >= goal.desiredWeeklyFrequency}
+              onClick={() => handleCompleteGoal(goal.id)}
+            >
+              <Plus className="size-4 text-zinc-600" />
+              {goal.title}
+            </OutlineButton>
+          )
+        })}
+      </div>
+    </>
   )
 }

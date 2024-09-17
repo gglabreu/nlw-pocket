@@ -20,7 +20,7 @@ import { createGoal } from '../http/create-goal'
 import { useQueryClient } from '@tanstack/react-query'
 
 const createGoalForm = z.object({
-  title: z.string().min(1, 'Informe a atividade que deseja realizar'),
+  title: z.string().min(1, 'Informe a atividade que deseja realizar!'),
   desiredWeeklyFrequency: z.coerce.number().min(1).max(7),
 })
 

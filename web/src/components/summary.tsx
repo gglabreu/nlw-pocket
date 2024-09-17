@@ -67,6 +67,8 @@ export function Summary() {
 
       <PendingGoals />
 
+      <Separator />
+
       <div className="flex flex-col gap-6">
         <h2 className="text-xl font-medium">Sua semana</h2>
 
